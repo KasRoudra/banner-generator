@@ -38,11 +38,11 @@ apt install python2 && git clone https://github.com/KasRoudra/banner-generator &
 
 #### Generated file
 
-<img src="https://github.com/KasRoudra/banner-generator/raw/main/screenshots/generated-file.jpeg">
+<img src="https://github.com/KasRoudra/banner-generator/raw/main/generated-file.jpeg">
 
 #### Generated File Preview 
 
-<img src="https://github.com/KasRoudra/banner-generator/raw/main/screenshots/preview.jpeg">
+<img src="https://github.com/KasRoudra/banner-generator/raw/main/preview.jpeg">
 
 ### [+] The generated python file will be in python2!
 
