@@ -7,12 +7,13 @@ try:
     with open(path, 'r') as f3:
         lines = f3.readlines()
         with open(path, 'w') as f:
-            lines [33] = "'\'\'+purple+'\'\'"+ lines[33]
-            lines [34] = "'\'\'+blue+'\'\'"+ lines[34]
             lines [29] = "'\'\'+green+'\'\'"+ lines[29]
-            lines [30] = "'\'\'+cyan+'\'\'"+ lines[30]
-            lines [31] = "'\'\'+yellow+'\'\'"+ lines[31]
-            lines [32] = "'\'\'+red+'\'\'"+ lines[32]
+            lines [30] = "'\'\'+red+'\'\'"+ lines[30]
+            lines [31] = "'\'\'+cyan+'\'\'"+ lines[31]
+            lines [32] = "'\'\'+yellow+'\'\'"+ lines[32]
+            lines [33] = "'\'\'+blue+'\'\'"+ lines[33]
+            lines [34] = "'\'\'+purple+'\'\'"+ lines[34]
+            lines [35] = "'\'\'+green+'\'\'"+ lines[35]
             f.writelines(lines)
             print("\nColor added successfully!")    
 except:
