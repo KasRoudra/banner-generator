@@ -6,6 +6,7 @@
 # Contact: https://m.me/KasRoudra
 
 import os, sys, time, requests
+from time import sleep
 # Normal
 black="\033[0;30m"
 red="\033[0;31m"
@@ -145,6 +146,10 @@ def main():
     while True:
         if (num=="1"):
             logoword= raw_input("\n"+ask+"Enter word(s) "+purple+"> ")
+            if (logoword==""):
+                print("\n"+error+"No Input")
+                sleep(2)
+                main()
             os.system("figlet "+logoword+" >> temp.txt")
             with open("temp.txt", 'r') as file1:
                 logotext = file1.read()
@@ -153,11 +158,19 @@ def main():
                     exit(1)
                 os.system("rm -rf temp.txt")
                 filename = raw_input("\n"+ask+"Output File Name "+purple+"> ")
+                if (filename==""):
+                    print("\n"+error+"No Input")
+                    sleep(2)
+                    main()
                 os.system("rm -rf "+filename)
             writer(logotext,filename)
             exit()
         elif (num == "2"):
             logoword= raw_input("\n"+ask+"Enter word(s) "+purple+"> ")
+            if (logoword==""):
+                print("\n"+error+"No Input")
+                sleep(2)
+                main()
             os.system("toilet "+logoword+" >> temp.txt")
             with open("temp.txt", 'r') as file1:
                 logotext = file1.read()
@@ -166,11 +179,19 @@ def main():
                     exit(1)
                 os.system("rm -rf temp.txt")
             filename = raw_input("\n"+ask+"Output File Name "+purple+"> " )
+            if (filename==""):
+                print("\n"+error+"No Input")
+                sleep(2)
+                main()
             os.system("rm -rf "+filename)
             writer(logotext,filename)
             break
         elif (num == "3"):
             logoword= raw_input("\n"+ask+"Enter word(s) "+purple+"> ")
+            if (logoword==""):
+                print("\n"+error+"No Input")
+                sleep(2)
+                main()
             slowprint(pw)
             try:
                  logotext = requests.get('https://artii.herokuapp.com/make?text='+logoword).text
@@ -178,7 +199,7 @@ def main():
                  os.system("rm -rf "+filename)
                  writer(logotext, filename)
             except:
-                print(error+"No Internet")
+                print(error+"No Internet or empty input!")
                 exit(1)
             break
         elif (num =="0"):
